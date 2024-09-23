@@ -1,0 +1,504 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    background-color: #ffffff;
+}
+
+h1, h2, h3, p {
+    margin-bottom: 20px;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #008ed3;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header .logo img {
+    height: 60px;
+}
+
+/* Navigation */
+header nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+header nav ul li a {
+    color: #ffffff;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #e0f7ff;
+}
+
+/* Download Buttons */
+.download-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+nav ul li a {
+    position: relative;
+    padding: 10px 15px; /* Отступы вокруг текста */
+    text-decoration: none; /* Убираем подчеркивание */
+    color: #008ed3; /* Цвет текста */
+}
+
+nav ul li a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 2px solid white; /* Белая обводка */
+    opacity: 0; /* Скрываем обводку по умолчанию */
+    transition: opacity 0.3s; /* Плавный переход при наведении */
+    border-radius: 5px; /* Закругленные углы */
+}
+
+nav ul li a:hover::before {
+    opacity: 1; /* Показываем обводку при наведении */
+}
+
+
+.download-buttons a {
+    background-color: #ffffff;
+    color: #008ed3;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.download-buttons a:hover {
+    background-color: #0077b6;
+    color: #ffffff;
+}
+
+
+/* Banner Styles */
+#banner {
+    background-color: #0077b6;
+    color: #ffffff;
+    padding: 100px 20px;
+    text-align: center;
+    background-image: url('banner-bg.jpg'); /* Optional background image */
+    background-size: cover;
+    background-position: center;
+}
+
+#banner .banner-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#banner h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+#banner p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+}
+
+#banner .download-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+#banner .download-buttons a {
+    font-size: 1.1rem;
+    padding: 15px 30px;
+    border-radius: 30px;
+}
+
+/* Features Section */
+#features {
+    background-color: #f7f7f7;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+#features h2 {
+    font-size: 2rem;
+    color: #008ed3;
+    margin-bottom: 30px;
+}
+
+#features p {
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+}
+
+#features .benefits {
+    display: flex;
+    justify-content: center; /* Центрируем карточки */
+    gap: 30px;
+    flex-wrap: wrap; /* Позволяем карточкам переноситься на новую строку, если экран маленький */
+}
+
+#features .benefits li {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 350px;
+    flex: 0 1 350px;
+    display: flex; /* Добавляем flexbox */
+    flex-direction: column; /* Выравниваем элементы по вертикали */
+    justify-content: center; /* Центрируем контент по вертикали */
+    align-items: center; /* Центрируем контент по горизонтали */
+}
+
+#features .benefits li img {
+    margin-bottom: 20px;
+    width: 300px;
+    height: 200px;
+}
+
+#features .benefits li p {
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: center; /* Центрируем текст */
+}
+
+#features .benefits li img {
+    margin-bottom: 20px;
+    width: 300px; /* Увеличьте ширину по вашему усмотрению */
+    height: 200px; /* Автоматическая высота для сохранения пропорций */
+}
+
+/* Footer Styles */
+footer {
+    background-color: #008ed3;
+    color: #ffffff;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+footer h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+footer p {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+footer .social-icons img {
+    height: 30px;
+    margin: 0 10px;
+}
+
+footer .connect-clinic {
+    display: inline-block;
+    margin-top: 20px;
+    background-color: #ffffff;
+    color: #008ed3;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+footer .connect-clinic:hover {
+    background-color: #0077b6;
+    color: #ffffff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+    }
+
+    .download-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #features .benefits {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    #banner h1 {
+        font-size: 2rem;
+    }
+
+    #banner p {
+        font-size: 1rem;
+    }
+
+    .download-buttons a {
+        width: 100%;
+        padding: 10px;
+        text-align: center;
+    }
+}
+
+/* User and Clinic Benefits Section */
+#user-clinic-benefits {
+    padding: 60px 20px;
+    background-color: #f7f7f7;
+    text-align: center;
+}
+
+#user-clinic-benefits h2 {
+    font-size: 2rem;
+    color: #008ed3;
+    margin-bottom: 30px;
+}
+
+#user-clinic-benefits h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+#user-clinic-benefits ul {
+    list-style: none;
+    padding: 0;
+}
+
+#user-clinic-benefits ul li {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+/* Pricing Section */
+#pricing {
+    padding: 60px 20px;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+#pricing h2 {
+    font-size: 2rem;
+    color: #008ed3;
+    margin-bottom: 30px;
+}
+
+#pricing p {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+#pricing .pricing-plans {
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+}
+
+#pricing .plan {
+    flex: 1;
+    background-color: #f7f7f7;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 250px;
+    text-align: center;
+}
+
+#pricing .plan h3 {
+    font-size: 1.5rem;
+    color: #008ed3;
+    margin-bottom: 20px;
+}
+
+#pricing .plan p {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+#pricing .learn-more {
+    display: inline-block;
+    margin-top: 20px;
+    background-color: #008ed3;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#pricing .learn-more:hover {
+    background-color: #0077b6;
+}
+
+/* Connect Clinic Form Section */
+#connect-clinic {
+    padding: 60px 20px;
+    background-color: #f7f7f7;
+    text-align: center;
+}
+
+#connect-clinic h2 {
+    font-size: 2rem;
+    color: #008ed3;
+    margin-bottom: 30px;
+}
+
+#connect-clinic p {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+#connect-clinic form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+#connect-clinic form label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+#connect-clinic form input, #connect-clinic form textarea {
+    width: 90%; /* Уменьшаем ширину до 90% */
+    padding: 8px; /* Уменьшаем внутренний отступ */
+    margin-bottom: 15px; /* Уменьшаем отступ между полями */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#connect-clinic form input#phone {
+    margin-left: 0; /* Убираем отступ слева */
+    padding-left: 10px; /* Увеличиваем отступ внутри поля, если нужно */
+}
+
+
+#connect-clinic form button {
+    background-color: #008ed3;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#connect-clinic form button:hover {
+    background-color: #0077b6;
+}
+
+/* Testimonials Section */
+#testimonials {
+    padding: 60px 20px;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+#testimonials h2 {
+    font-size: 2rem;
+    color: #008ed3;
+    margin-bottom: 30px;
+}
+
+#testimonials .testimonial-slider {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+#testimonials .testimonial {
+    background-color: #f7f7f7;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+}
+
+#testimonials .testimonial p {
+    font-size: 1.1rem;
+    color: #333;
+    font-style: italic;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    header nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .download-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .download-buttons a {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+}
+
+    #features .benefits {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    #pricing .pricing-plans {
+        flex-direction: column; /* Измените на вертикальную компоновку */
+        align-items: center;    /* Центрируем элементы */
+        gap: 20px;             /* Отступы между планами */
+    }
+
+    #banner h1 {
+        font-size: 2rem;
+    }
+
+    #banner p {
+        font-size: 1rem;
+    }
+
+    /* Настройка стилей для планов */
+    #pricing .plan {
+        width: 100%; /* Ширина 100% для мобильной версии */
+        max-width: none; /* Убираем ограничение по максимальной ширине */
+    }
+}
+
+    header nav ul li {
+        margin-bottom: 10px; /* Отступ между пунктами навигации */
+    }
+}

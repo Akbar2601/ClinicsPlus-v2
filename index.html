@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClinicsPlus</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- InputMask -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.6/jquery.inputmask.min.js"></script>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <img src="logo.jpg" alt="ClinicsPlus Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#banner">Главная</a></li>
+                <li><a href="#features">Функции</a></li>
+                <li><a href="#pricing">Тарифные планы</a></li>
+                <li><a href="#contacts">Контакты</a></li>
+                <li><a href="#connect-clinic">Подключить клинику</a></li>
+                <li><a href="eng.html">English</a></li>
+                <li><a href="uzb.html">O'zbekcha</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Banner Section -->
+    <section id="banner">
+        <div class="banner-content">
+            <h1>ClinicsPlus – найди свою клинику и запишись онлайн!</h1>
+            <p>Приложение ClinicsPlus помогает вам быстро найти медицинские учреждения, сравнить цены и записаться на прием онлайн.</p>
+            <div class="download-buttons">
+                <a href="#" class="ios">Скачать для iOS</a>
+                <a href="#" class="android">Скачать для Android</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Advantages Section -->
+    <section id="features">
+        <h2>Почему стоит выбрать ClinicsPlus?</h2>
+        <p>ClinicsPlus – это инновационное решение для поиска медицинских услуг и клиник. Мы собрали базу всех клиник в вашем городе с актуальной информацией о часах работы, видах услуг и ценах. С помощью удобных фильтров вы сможете найти нужного специалиста, сравнить стоимость услуг и забронировать время приема в несколько кликов.</p>
+        <ul class="benefits">
+            <li><img src="1.png" alt="Иконка"> • Поиск клиник рядом с вами.</li>
+            <li><img src="1.png" alt="Иконка"> • Онлайн-запись на прием.</li>
+            <li><img src="1.png" alt="Иконка"> • Сравнение цен.</li>
+            <li><img src="1.png" alt="Иконка"> • Доступно бесплатно для пользователей.</li>
+        </ul>
+    </section>
+
+    <!-- User and Clinic Benefits Section -->
+    <section id="user-clinic-benefits">
+        <h2>Преимущества для пользователей и клиник</h2>
+        <div class="users-benefits">
+            <h3>Преимущества для пользователей:</h3>
+            <ul>
+                <li> • Локация клиник на карте.</li><br>
+                <li> • Фильтрация по цене, видам услуг и отзывам.</li><br>
+                <li> • Запись на анализы и приемы (в платной версии).</li>
+            </ul>
+        </div>
+        <div class="clinic-benefits">
+            <h3>Преимущества для клиник:</h3>
+            <ul>
+                <li> • Админ панель для управления услугами и ценами.</li><br>
+                <li> • Повышение видимости среди пользователей.</li><br>
+                <li> • Онлайн-запись пациентов (в максимальной версии).</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Connect Clinic Form -->
+    <section id="connect-clinic">
+        <h2>Подключите свою клинику к ClinicsPlus</h2>
+        <p>Оставьте заявку, и мы свяжемся с вами для подключения...</p>
+        <form id="connect-clinic-form">
+            <div class="form-group">
+                <label for="clinic-name">Название клиники:</label>
+                <input type="text" id="clinic-name" name="clinic-name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="contact-name">Имя контактного лица:</label>
+                <input type="text" id="contact-name" name="contact-name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone-code">Код страны:</label>
+                <select id="phone-code" name="phone-code" required>
+                    <option value="+7">Россия (+7)</option>
+                    <option value="+374">Армения (+374)</option>
+                    <option value="+994">Азербайджан (+994)</option>
+                    <option value="+375">Беларусь (+375)</option>
+                    <option value="+995">Грузия (+995)</option>
+                    <option value="+996">Киргизия (+996)</option>
+                    <option value="+373">Молдова (+373)</option>
+                    <option value="+992">Таджикистан (+992)</option>
+                    <option value="+993">Туркменистан (+993)</option>
+                    <option value="+998">Узбекистан (+998)</option>
+                    <option value="+91">Индия (+91)</option>
+                    <option value="+90">Турция (+90)</option>
+                    <option value="+66">Таиланд (+66)</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Телефон: (не забудьте выбрать код страны)</label>
+                <input type="tel" id="phone" name="phone" placeholder="Ваш телефон" required>
+            </div>
+
+            <div class="form-group">
+                <label for="questions">Дополнительные вопросы (опционально):</label>
+                <textarea id="questions" name="questions"></textarea>
+            </div>
+
+            <button type="submit">Подключить клинику</button>
+        </form>
+    </section>
+
+    <!-- Footer Section -->
+    <footer id="contacts">
+        <h3>Контактная информация</h3>
+        <p>Email: info@clinicsplus.uz</p>
+        <p>+998 (90) 032-75-35</p>
+    </footer>
+
+    <script>
+        document.getElementById('connect-clinic-form').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            const clinicName = document.getElementById('clinic-name').value;
+            const contactName = document.getElementById('contact-name').value;
+            const email = document.getElementById('email').value;
+            const phoneCode = document.getElementById('phone-code').value;
+            const phone = document.getElementById('phone').value;
+            const questions = document.getElementById('questions').value;
+
+            const message = 
+                Новая заявка на подключение клиники:
+                Название клиники: ${clinicName}
+                Контактное лицо: ${contactName}
+                Email: ${email}
+                Телефон: ${phoneCode} ${phone}
+                Дополнительные вопросы: ${questions}
+            ;
+
+            const telegramUrl = https://api.telegram.org/bot7373812547:AAGRQkukT5gUMSSApucrKjHjU1lINCLpOr8/sendMessage?chat_id=-4222268084&text=${encodeURIComponent(message)};
+
+            fetch(telegramUrl)
+                .then(response => {
+                    if (response.ok) {
+                        window.location.href = 'success.html';
+                    } else {
+                        alert('Ошибка отправки данных. Пожалуйста, попробуйте еще раз.');
+                    }
+                })
+                .catch(error => {
+                    console.error('Ошибка:', error);
+                    alert('Ошибка отправки данных. Пожалуйста, попробуйте еще раз.');
+                });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ClinicsPlus</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- InputMask -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.6/jquery.inputmask.min.js"></script>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <img src="logo.jpg" alt="ClinicsPlus Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#banner">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#pricing">Pricing Plans</a></li>
+                <li><a href="#contacts">Contact</a></li>
+                <li><a href="#connect-clinic">Connect Clinic</a></li>
+                <li><a href="index.html">Русский</a></li>
+                <li><a href="uz.html">O'zbekcha</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Banner Section -->
+    <section id="banner">
+        <div class="banner-content">
+            <h1>ClinicsPlus – Find Your Clinic and Book Online!</h1>
+            <p>The ClinicsPlus app helps you quickly find medical institutions, compare prices, and book appointments online.</p>
+            <div class="download-buttons">
+                <a href="#" class="ios">Download for iOS</a>
+                <a href="#" class="android">Download for Android</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Advantages Section -->
+    <section id="features">
+        <h2>Why Choose ClinicsPlus?</h2>
+        <p>ClinicsPlus is an innovative solution for finding medical services and clinics. We have gathered a database of all clinics in your city with up-to-date information on hours, services, and prices. With convenient filters, you can find the right specialist, compare service costs, and book an appointment in just a few clicks.</p>
+        <ul class="benefits">
+            <li><img src="1.png" alt="Icon"> • Search for clinics near you.</li>
+            <li><img src="1.png" alt="Icon"> • Online appointment booking.</li>
+            <li><img src="1.png" alt="Icon"> • Price comparison.</li>
+            <li><img src="1.png" alt="Icon"> • Available for free for users.</li>
+        </ul>
+    </section>
+
+    <!-- User and Clinic Benefits Section -->
+    <section id="user-clinic-benefits">
+        <h2>Benefits for Users and Clinics</h2>
+        <div class="users-benefits">
+            <h3>Benefits for Users:</h3>
+            <ul>
+                <li> • Clinic locations on the map.</li><br>
+                <li> • Filtering by price, types of services, and reviews.</li><br>
+                <li> • Appointment booking for tests and consultations (in the paid version).</li>
+            </ul>
+        </div>
+        <div class="clinic-benefits">
+            <h3>Benefits for Clinics:</h3>
+            <ul>
+                <li> • Admin panel for managing services and prices.</li><br>
+                <li> • Increased visibility among users.</li><br>
+                <li> • Online appointment booking for patients (in the premium version).</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Connect Clinic Form -->
+    <section id="connect-clinic">
+        <h2>Connect Your Clinic to ClinicsPlus</h2>
+        <p>Submit your application, and we will contact you to connect...</p>
+        <form id="connect-clinic-form">
+            <div class="form-group">
+                <label for="clinic-name">Clinic Name:</label>
+                <input type="text" id="clinic-name" name="clinic-name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="contact-name">Contact Person Name:</label>
+                <input type="text" id="contact-name" name="contact-name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone-code">Country Code:</label>
+                <select id="phone-code" name="phone-code" required>
+                    <option value="+7">Russia (+7)</option>
+                    <option value="+374">Armenia (+374)</option>
+                    <option value="+994">Azerbaijan (+994)</option>
+                    <option value="+375">Belarus (+375)</option>
+                    <option value="+995">Georgia (+995)</option>
+                    <option value="+996">Kyrgyzstan (+996)</option>
+                    <option value="+373">Moldova (+373)</option>
+                    <option value="+992">Tajikistan (+992)</option>
+                    <option value="+993">Turkmenistan (+993)</option>
+                    <option value="+998">Uzbekistan (+998)</option>
+                    <option value="+91">India (+91)</option>
+                    <option value="+90">Turkey (+90)</option>
+                    <option value="+66">Thailand (+66)</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone: (don't forget to select the country code)</label>
+                <input type="tel" id="phone" name="phone" placeholder="Your phone" required>
+            </div>
+
+            <div class="form-group">
+                <label for="questions">Additional Questions (optional):</label>
+                <textarea id="questions" name="questions"></textarea>
+            </div>
+
+            <button type="submit">Connect Clinic</button>
+        </form>
+    </section>
+
+    <!-- Footer Section -->
+    <footer id="contacts">
+        <h3>Contact Information</h3>
+        <p>Email: info@clinicsplus.uz</p>
+        <p>+998 (90) 032-75-35</p>
+    </footer>
+
+    <script>
+        document.getElementById('connect-clinic-form').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            const clinicName = document.getElementById('clinic-name').value;
+            const contactName = document.getElementById('contact-name').value;
+            const email = document.getElementById('email').value;
+            const phoneCode = document.getElementById('phone-code').value;
+            const phone = document.getElementById('phone').value;
+            const questions = document.getElementById('questions').value;
+
+            const message = 
+                `New application to connect clinic:
+                Clinic Name: ${clinicName}
+                Contact Person: ${contactName}
+                Email: ${email}
+                Phone: ${phoneCode} ${phone}
+                Additional Questions: ${questions}`;
+
+            const telegramUrl = `https://api.telegram.org/bot7373812547:AAGRQkukT5gUMSSApucrKjHjU1lINCLpOr8/sendMessage?chat_id=-4222268084&text=${encodeURIComponent(message)}`;
+
+            fetch(telegramUrl)
+                .then(response => {
+                    if (response.ok) {
+                        window.location.href = 'success.html';
+                    } else {
+                        alert('Error sending data. Please try again.');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('Error sending data. Please try again.');
+                });
+        });
+    </script>
+</body>
+</html>
